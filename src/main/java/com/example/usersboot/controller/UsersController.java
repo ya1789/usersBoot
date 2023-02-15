@@ -21,12 +21,7 @@ public class UsersController {
     public UsersController(UserService userService) {
         this.userService = userService;
     }
-
-    @ModelAttribute("users")
-    public List<User> users() {
-        return userService.listUsers();
-    }
-
+    
     @GetMapping(value = "/")
     public String users(ModelMap model) {
         List<User> usr = userService.listUsers();

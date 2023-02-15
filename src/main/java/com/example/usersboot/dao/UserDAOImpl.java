@@ -3,13 +3,14 @@ package com.example.usersboot.dao;
 
 import com.example.usersboot.model.User;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 
 import java.util.List;
 
-@Component
+@Repository
 public class UserDAOImpl implements UserDAO {
     private static final String GET_ALL_USERS = "from User";
     public static final String DELETE_USER_BY_ID = "delete from User u where u.id=:id";
